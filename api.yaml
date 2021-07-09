@@ -6,7 +6,7 @@ data:
   context: /SwaggerPetstore
   version: 1.0.0
   provider: admin
-  lifeCycleStatus: CREATED
+  lifeCycleStatus: PUBLISHED
   isRevision: false
   revisionId: 0
   type: HTTP
@@ -23,8 +23,8 @@ data:
   endpointConfig:
     endpoint_type: http
     production_endpoints:
-      url: http://localhost:8080
+      url: https://petstore.swagger.io/v2
     sandbox_endpoints:
-      url: http://localhost:8081
+      url: https://petstore.swagger.io/v2
   endpointImplementationType: ENDPOINT
-  websubSubscriptionConfiguration: null
+  websubSubscriptionConfiguration: true
