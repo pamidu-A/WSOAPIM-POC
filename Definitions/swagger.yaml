@@ -148,8 +148,8 @@ components:
         implicit:
           authorizationUrl: https://petstore.swagger.io/oauth/dialog
           scopes:
-            read:pets: read your petss
-            write:pets: modify pets in your accounts
+            read:petss: read your petss6
+            write:petss: modify pets in your accounts6
       type: oauth2
 externalDocs:
   description: Find out more about Swagger
@@ -163,7 +163,7 @@ info:
     url: http://www.apache.org/licenses/LICENSE-2.0.html
   termsOfService: http://swagger.io/terms/
   title: Swagger Petstore
-  version: 1.0.0
+  version: 6.0.0
 openapi: 3.0.0
 paths:
   /pet:
@@ -177,8 +177,8 @@ paths:
           description: Invalid input
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: Add a new pet to the pet store
       tags:
       - pet
@@ -196,8 +196,8 @@ paths:
           description: Validation exception
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: Update an existing pet
       tags:
       - pet
@@ -225,8 +225,8 @@ paths:
           description: Pet not found
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: Deletes a pet
       tags:
       - pet
@@ -288,8 +288,8 @@ paths:
           description: Invalid input
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: Updates a pet in the store with form data
       tags:
       - pet
@@ -320,8 +320,8 @@ paths:
           description: successful operation
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: uploads an image
       tags:
       - pet
@@ -362,8 +362,8 @@ paths:
           description: Invalid status value
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: Finds Pets by status
       tags:
       - pet
@@ -400,8 +400,8 @@ paths:
           description: Invalid tag value
       security:
       - petstore_auth:
-        - write:pets
-        - read:pets
+        - write:petss
+        - read:petss
       summary: Finds Pets by tags
       tags:
       - pet
