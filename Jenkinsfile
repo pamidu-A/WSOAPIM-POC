@@ -18,7 +18,7 @@ pipeline {
                 sh('apictl login dev -u jenkins-ci -p Jenkinscicd -k')
                 sh('pwd && ls && cd .. && pwd && ls')
                 //sh('apictl import api --file ../WSOAPIM-POC --environment dev')
-                 sh('apictl import api --file ../WSOAPIM-POC --environment dev --preserve-provider=false --update=true --rotate-revision')
+                 sh('apictl import api --file ../WSOAPIM-POC --environment dev --preserve-provider=false --update=true --rotate-revision --verbose ')
             }
         }
         stage('delete workspace') {
