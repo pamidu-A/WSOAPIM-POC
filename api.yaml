@@ -27,4 +27,4 @@ data:
     sandbox_endpoints:
       url: https://petstore.swagger.io/v2
   endpointImplementationType: ENDPOINT
-  websubSubscriptionConfiguration: true
+  websubSubscriptionConfiguration: null
