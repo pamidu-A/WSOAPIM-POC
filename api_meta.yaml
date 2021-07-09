@@ -2,5 +2,5 @@ deploy:
   import:
     preserveProvider: true
     update: true
-name: SwaggerPetstore6
-version: 6.0.0
+name: SwaggerPetstore7
+version: 7.0.0
