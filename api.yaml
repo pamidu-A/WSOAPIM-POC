@@ -1,10 +1,10 @@
 type: api
 version: v4.0.0
 data:
-  name: NewSwaggerPetstoreNew
+  name: SwaggerPetstore4
   description: This is a sample Petstore server.
-  context: /NewSwaggerPetstoreNew
-  version: 3.0.0
+  context: /SwaggerPetstore4
+  version: 4.0.0
   provider: admin
   lifeCycleStatus: PUBLISHED
   isRevision: true
