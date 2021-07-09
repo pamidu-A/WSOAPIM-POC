@@ -16,9 +16,9 @@ pipeline {
 //                 sh('sed -i -e "s+read:pets: read your pets+read:pets: read your petss+" XYZ/Definitions/swagger.yaml')
 //                 sh('sed -i -e "s+write:pets: modify pets in your account+write:pets: modify pets in your accountt+" XYZ/Definitions/swagger.yaml')
                 sh('apictl login dev -u jenkins-ci -p Jenkinscicd -k')
-                 sh('cp -r ../WSOAPIM-POC ../WSOAPIM-POC-1')
+                 sh('cp -r ../WSOAPIM-POC ../${currentBuild.number}')
                 sh('pwd && ls && cd .. && pwd && ls')
-                 sh('apictl import api --file ../WSOAPIM-POC-1 --environment dev')
+                 sh('apictl import api --file ../${currentBuild.number} --environment dev')
                 //sh('apictl import api --file ../WSOAPIM-POC --environment dev')
                  //sh('apictl import api --file ../WSOAPIM-POC --environment dev --preserve-provider=false --update=true --rotate-revision --verbose ')
             }
