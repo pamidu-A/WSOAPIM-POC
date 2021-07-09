@@ -22,16 +22,16 @@ pipeline {
                  //sh('apictl import api --file ../WSOAPIM-POC --environment dev --preserve-provider=false --update=true --rotate-revision --verbose ')
             }
         }
-        stage('delete workspace') {
-            steps {
-               cleanWs cleanWhenAborted: false, cleanWhenFailure: false, cleanWhenNotBuilt: false, cleanWhenUnstable: false, notFailBuild: true
-            }
-        }
+//         stage('delete workspace') {
+//             steps {
+//                cleanWs cleanWhenAborted: false, cleanWhenFailure: false, cleanWhenNotBuilt: false, cleanWhenUnstable: false, notFailBuild: true
+//             }
+//         }
     }
-    post {
-        always {
-        //cleanup workspace.
-          cleanWs()
-        }
-    }
+//     post {
+// //         always {
+// //         //cleanup workspace.
+// //           cleanWs()
+// //         }
+//     }
 }
