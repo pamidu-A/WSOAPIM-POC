@@ -15,10 +15,12 @@ pipeline {
 //                 sh('sed -i -e "s+url: http://localhost:8081+url: https://petstore.swagger.io/v2+" XYZ/api.yaml')
 //                 sh('sed -i -e "s+read:pets: read your pets+read:pets: read your petss+" XYZ/Definitions/swagger.yaml')
 //                 sh('sed -i -e "s+write:pets: modify pets in your account+write:pets: modify pets in your accountt+" XYZ/Definitions/swagger.yaml')
-                sh('apictl login dev -u jenkins-ci -p Jenkinscicd -k')
-                 sh('cp -r ../WSOAPIM-POC ../${BUILD_NUMBER}')
+                withCredentials([[$class: 'UsernamePasswordMultiBinding', credentialsId:'wso2', usernameVariable: 'USERNAME', passwordVariable: 'PASSWORD']]) {
+                  sh 'apictl login dev -u $USERNAME -p $PASSWORD -k'
+                }
+                sh('cp -r ../WSOAPIM-POC ../${BUILD_NUMBER}')
                 sh('pwd && ls && cd .. && pwd && ls')
-                 sh('apictl import api --file ../${BUILD_NUMBER} --environment dev')
+                 h('apictl import api --file ../${BUILD_NUMBER} --environment dev')
                 //sh('apictl import api --file ../WSOAPIM-POC --environment dev')
                  //sh('apictl import api --file ../WSOAPIM-POC --environment dev --preserve-provider=false --update=true --rotate-revision --verbose ')
             }
