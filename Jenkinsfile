@@ -9,7 +9,7 @@ pipeline {
                 sh('cp -r ../WSOAPIM-POC ../${BUILD_NUMBER}')
                 sh('pwd && ls && cd .. && pwd && ls')
                 sh('apictl import api --file ../${BUILD_NUMBER} --environment dev')
-                sh('rm -r ../ ../${BUILD_NUMBER} ')
+                sh('rm -r ../${BUILD_NUMBER} ')
             }
         }
         stage('delete workspace') {
